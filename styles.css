@@ -1,0 +1,183 @@
+/* Base Styles */
+html, body {
+    font-family: 'Georgia', serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px; /* Base font size */
+}
+
+/* Text Colors */
+.green-text {
+    color: darkseagreen
+}
+.red-text {
+    color: crimson
+}
+.gold-text {
+    color:gold
+}
+.blue-text {
+    color: cornflowerblue
+}
+ol li::marker {
+    color: rgb(252, 102, 132);
+}
+
+/* Video Styles */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    max-width: 50rem;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Keeps the container full height if needed */
+    padding-top: 2rem; /* Add some padding at the top for separation */
+    /* ... rest of the styles ... */
+}
+
+.container, .content-row, .email-form {
+    box-sizing: border-box;
+}
+
+/* Content Rows */
+.content-row, .detailed-content, .form-row {
+    width: 80%; /* Adjusted width for better layout */
+    margin: 2rem auto; /* Auto margins to center within the container */
+}
+
+/* Form Row */
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjusted width for better layout */
+    margin: 2rem auto; /* Auto margins to center within the container */
+}
+
+
+
+/* Headings and Paragraphs */
+h1, p {
+    width: 80%; /* Adjusted width for better layout */
+    margin: 1rem auto; /* Auto margins to center within the container */
+}
+
+h1 {
+    font-size: 2rem;
+    color: crimson;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Detailed Content */
+.detailed-content {
+    color: #fff;
+}
+
+/* Email Form */
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem; /* Rounded corners for the container */
+    background-color: #ffffff; /* Background color for the container */
+    padding: 2rem; /* Padding for the container */
+    max-width: 40rem; /* Maximum width for the container */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    width: 100%; /* Full width of the container */
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%; /* Full width of the container */
+    padding: 1rem; /* Adjusted padding */
+    margin-bottom: 0.5rem; /* Reduced spacing between fields */
+    border-radius: 0.5rem; /* Rounded corners for input fields */
+    border: 0.1rem solid #ccc; /* Border for input fields */
+    box-sizing: border-box; /* Ensures padding and border don't increase element width */
+}
+
+/* Submit Input */
+input[type="submit"] {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #7c9fff;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #2a54e0;
+}
+
+/* Media Queries */
+/* Small Screens */
+@media screen and (max-width: 768px) {
+    .container, .email-form {
+        width: 95%; /* Adjusted width for smaller screens */
+    }
+
+    .video-container {
+        height: 40vh; /* Reduced height on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduced font size for h1 */
+    }
+
+    p, .detailed-content {
+        font-size: 1rem; /* Reduced font size for p and detailed content */
+    }
+}
+
+/* Medium Screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container, .email-form {
+        width: 90%; /* Adjusted width for medium screens */
+    }
+
+    h1 {
+        font-size: 1.75rem; /* Medium font size for h1 */
+    }
+
+    p, .detailed-content {
+        font-size: 1.25rem; /* Medium font size for p and detailed content */
+    }
+}
+
+/* Large Screens */
+@media screen and (min-width: 1025px) {
+    .container, .email-form {
+        width: 100%; /* Adjusted width for larger screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Larger font size for h1 */
+    }
+
+    p, .detailed-content {
+        font-size: 1.5rem; /* Larger font size for p and detailed content */
+    }
+}
